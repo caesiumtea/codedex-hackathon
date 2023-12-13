@@ -1,6 +1,8 @@
 // reference from https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 function startTracking() {
+  console.log("starting tracking");
   if (!localStorage.getItem("tracking")) {
+    console.log("creating storage");
     let tracking = new Tracking;
     let today = new Date();
     let newDay = new Day(today, []);
@@ -24,3 +26,6 @@ function populateHabits() {
     habitsDiv.appendChild(newDiv);
   }
 }
+
+startTracking()
+populateHabits()
