@@ -40,6 +40,7 @@ function populateHabits() {
     } else if (current.type === "counting") {
       url = "viewCountingHabit.html";
     }
+    sessionStorage.setItem("habitView", JSON.stringify(current))
     newDiv.addEventListener('click', function(){
       gotoPage(url, current);
     });
