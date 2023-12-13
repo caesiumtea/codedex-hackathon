@@ -36,6 +36,13 @@ function populateChecklist() {
         let flowerPot = document.createElement('div');
         flowerPot.classList = "flowerpot";
         flowerDiv.appendChild(flowerPot);
+
+        date = new Date(lastWeek[i].date);
+        dateP = document.createElement('span');
+        dateP.textContent = date.getMonth() + "/" + date.getDate();
+        dateP.classList = "flower-date";
+        flowerDiv.appendChild(dateP);
+        
         garden.appendChild(flowerDiv);
       }
     }
