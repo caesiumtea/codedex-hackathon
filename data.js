@@ -24,7 +24,7 @@ function gotoPage(address = "index.html", habit){
     currDate = new Date();
     // TODO: change to next day of data
   }
-  
+  sessionStorage.setItem("habitView", JSON.stringify(habit));
   // go to new location
   window.location.assign(address);
 }

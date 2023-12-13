@@ -25,9 +25,10 @@ function populateHabits() {
    let latestDay = tracking.days[tracking.days.length - 1];
    
   for (let i = 0; i < latestDay.habits.length; i++) {
-    console.log(latestDay.habits[i]);
+    // console.log(latestDay.habits[i]);
     let current = latestDay.habits[i];
     let newDiv = document.createElement('div');
+    newDiv.classList = "";
     newDiv.classList = "home-habit";
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
@@ -40,7 +41,7 @@ function populateHabits() {
     } else if (current.type === "counting") {
       url = "viewCountingHabit.html";
     }
-    sessionStorage.setItem("habitView", JSON.stringify(current))
+    // sessionStorage.setItem("habitView", JSON.stringify(current))
     newDiv.addEventListener('click', function(){
       gotoPage(url, current);
     });
