@@ -18,3 +18,25 @@ function getCookie(cname) {
   }
   return "";
 }
+
+class Tracking{
+  constructor(days=[]){
+    this.days = days;
+  }
+}
+
+class Day{
+  constructor(date, habits=[]){
+    this.date = date;
+    this.habits = habits;
+  }
+}
+
+class Habit{
+  constructor(type, title="", text="",  done=0){
+    this.type = type;
+    this.title = title;
+    this.text = text;
+    this.done = done;
+  }
+}
