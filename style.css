@@ -101,5 +101,5 @@ h2 {
   height: 8vw;
   width: 100%;
   border: #233D4D 3px solid;
-  transform: perspective(20px) rotateX(-10deg);
+  transform: perspective(2px) rotateX(-1deg);
 }
