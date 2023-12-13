@@ -3,7 +3,9 @@ function submitForm(){
   let title = document.getElementById("title").value;
   let description = document.getElementById("description").value;
   let habit = new Habit(category, title, description);
-  getCookie("tracking")
+  let tracking = getCookie("tracking");
+  tracking.days[tracking.days.length-1];
+  habits.push(habit)
   
-  window.location.assign("index.html");
+  gotoPage("index.html");
   }

@@ -2,7 +2,6 @@ function setCookie(cName, cValue) {
   document.cookie = cName + "=" + cValue;
 }
 
-//Copied below function from w3schools
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -19,15 +18,18 @@ function getCookie(cname) {
   return "";
 }
 
-function newPage(){
-  checkDate()
-  go to place
+function gotoPage(address = "index.html"){
+  // check date
+  if
+  
+  // go to new location
+  window.location.assign(address);
 }
 
 /* Data types for the site */
 
 //Global variables
-let habitTitles = [];
+let habits = [];
 let currDate = new Date();
 
 
