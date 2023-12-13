@@ -89,6 +89,18 @@ main {
   align-items: center;
 }
 
+.view-habit-btn {
+  background-color: var(--color-bg-second);
+  font-size: 10vw;
+  border-radius: 50%;
+  text-align: center;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #add-button {
   margin: auto;
   background-color: var(--color-bg-second);

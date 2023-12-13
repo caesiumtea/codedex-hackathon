@@ -44,6 +44,10 @@ function populateHabits() {
     newH3.textContent = current.title;
     lineDiv.appendChild(newH3);
     
+    let viewHabitBtn = document.createElement('div');
+    viewHabitBtn.classList = "view-habit-btn";
+    viewHabitBtn.textContent = "...";
+
     let url;
     if (current.type === "checklist") {
       url = "viewCheckboxHabit.html";
@@ -51,9 +55,10 @@ function populateHabits() {
       url = "viewCountingHabit.html";
     }
     // sessionStorage.setItem("habitView", JSON.stringify(current))
-    newH3.addEventListener('click', function(){
+    viewHabitBtn.addEventListener('click', function(){
       gotoPage(url, current);
     });
+    lineDiv.appendChild(viewHabitBtn);
     
     // lineDiv.appendChild(titleDiv);
     habitsDiv.appendChild(lineDiv);
