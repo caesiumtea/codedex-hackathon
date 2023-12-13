@@ -23,7 +23,10 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 12vw;
+}
+
+h1.home {
+  font-size: 12vw;
 }
 
 main {
@@ -67,7 +70,7 @@ h2 {
 }
 
 #garden {
-  margin: 2rem;
+  margin: 1rem;
   display: grid;
   grid-template-columns: 7;
   grid-auto-flow: column;
@@ -79,6 +82,7 @@ h2 {
 
 .flower-div {
   text-align: center;
+  width: 9vw;
 }
 
 .bloom::after {
@@ -91,9 +95,11 @@ h2 {
   font-size: 8vw;
 }
 
+/* trapezoid code from https://stackoverflow.com/questions/7920754/how-to-draw-a-trapezium-trapezoid-with-css3 */
 .flowerpot {
   background-color: #FE7F2D;
-  height: 10vw;
-  width: 10vw;
-  border: #233D4D 2px solid;
+  height: 8vw;
+  width: 100%;
+  border: #233D4D 3px solid;
+  transform: perspective(20px) rotateX(-10deg);
 }
