@@ -8,6 +8,7 @@ function submitForm(){
   tracking.days[tracking.days.length-1].habits.push(newHabit);
   localStorage.setItem("tracking", JSON.stringify(tracking));
   habitTitles.push(newHabit);
+  localStorage.setItem("habitTitles", habitTitles)
   
   gotoPage("index.html");
   }

@@ -14,18 +14,20 @@ function startTracking() {
 function populateHabits() {
   console.log("populating...");
   let habitsDiv = document.getElementById("habits");
-  habitsDiv.style.backgroundColor = "white";
-  habitsDiv.style.height = "10";
+  // habitsDiv.style.backgroundColor = "white";
+  // habitsDiv.style.height = "10px";
+  console.log(habitTitles.length);
+  habitTitles = localStorage.getItem("habitTitles");
   for (let i = 0; i < habitTitles.length; i++) {
+    console.log(habitTitles[i]);
     let newDiv = document.createElement('div');
     newDiv.classList = "home-habit";
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
-    newH3.textContent = habitTitles[i].title;
+    newH3.textContent = habitTitles[i];
     newDiv.appendChild(newH3);
     habitsDiv.appendChild(newDiv);
   }
 }
 
-startTracking()
 populateHabits()
