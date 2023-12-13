@@ -29,7 +29,7 @@ function gotoPage(address = "index.html"){
 /* Data types for the site */
 
 //Global variables
-let habits = [];
+let habitTitles = [];
 let currDate = new Date();
 
 

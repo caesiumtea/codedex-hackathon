@@ -1,0 +1,25 @@
+#habitForm{
+    display: flex;
+    background-color: white;
+    outline: 10px outset white;
+    flex-direction: column;
+    align-items: center;
+    max-width: 66%;
+    justify-content: center;
+    margin:auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10px;
+}
+
+#habitForm > input{
+    margin-bottom: 10px;
+}
+
+#habitForm > h1,label{
+    color:navy;
+}
+
+body{
+    background-color: #1b1b1b;
+}
