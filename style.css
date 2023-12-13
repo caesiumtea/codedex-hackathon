@@ -47,8 +47,14 @@ main {
   box-shadow: 5px 5px #619B8A;
 }
 
+.home-habit:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .home-habit-title {
   margin: auto;
+  font-weight: inherit;
 }
 
 #add-button {
