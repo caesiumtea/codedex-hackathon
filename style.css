@@ -103,3 +103,14 @@ h2 {
   border: #233D4D 3px solid;
   transform: perspective(2px) rotateX(-1deg);
 }
+
+p {
+  margin: 1rem;
+}
+
+.back, .back:visited, .back:active {
+  color:#233D4D ;
+  font-weight: bold;
+  text-align: center;
+
+}
