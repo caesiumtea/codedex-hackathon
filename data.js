@@ -19,14 +19,18 @@ function getCookie(cname) {
   return "";
 }
 
+function newPage(){
+  checkDate()
+  go to place
+}
+
 /* Data types for the site */
 
-class Data{
-  constructor(habits=[]){
-    this.habitTitles = habits;
-    this.currDate = new Date();
-  }
-}
+//Global variables
+let habitTitles = [];
+let currDate = new Date();
+let 
+
 
 class Tracking{
   constructor(days=[]){
