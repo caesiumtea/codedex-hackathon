@@ -3,13 +3,11 @@ function populateChecklist() {
     let habitName = habit.title;
     let h1 = document.querySelector("h1");
     h1.textContent = habitName;
-    // let main = document.querySelector("main");
     let garden = document.querySelector("#garden");
 
 
     let tracking = JSON.parse(localStorage.getItem("tracking"));
     let lastWeek;
-    console.log("tracking days: " + tracking.days.length);
     if (tracking.days.length >= 7) {
       lastWeek = tracking.days.slice(-7, tracking.days.length);
     } else {

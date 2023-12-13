@@ -37,6 +37,10 @@ main {
   margin: auto;
 }
 
+p {
+  margin: 1rem;
+}
+
 .back,
 .back:visited,
 .back:active {
@@ -208,7 +212,33 @@ h2 {
   font-size: 3vw;
 }
 
-p {
-  margin: 1rem;
+/****** COUNTING VIEW ******/
+
+#barchart {
+  display: grid;
+  grid-template-columns: 7;
+  grid-template-rows: 1;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  align-items: end;
+  justify-items: center;
 }
 
+.bar-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  background-color: #619B8A;
+  width: 20px;
+}
+
+.chart-number {
+  font-size: 4vw;
+}
+
+.chart-date {
+  font-size: 3vw;
+}

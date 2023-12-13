@@ -3,13 +3,11 @@ function populateBarChart() {
     let habitName = habit.title;
     let h1 = document.querySelector("h1");
     h1.textContent = habitName;
-    // let main = document.querySelector("main");
     let chart = document.querySelector("#barchart");
 
 
     let tracking = JSON.parse(localStorage.getItem("tracking"));
     let lastWeek;
-    // console.log("tracking days: " + tracking.days.length);
     if (tracking.days.length >= 7) {
       lastWeek = tracking.days.slice(-7, tracking.days.length);
     } else {
@@ -25,6 +23,16 @@ function populateBarChart() {
         let instance = lastWeek[i].habits[habitIndex];
         let barDiv = document.createElement('div');
         barDiv.classList = "bar-div";
+
+        let bar = document.createElement('div');
+        bar.classList = "bar";
+        bar.style.height = (instance.done * 10).toString() + "px";
+        barDiv.appendChild(bar);
+
+        let count = document.createElement('span');
+        count.classList = "chart-number";
+        count.textContent = instance.done.toString();
+        barDiv.appendChild(count);
 
         let date = new Date(lastWeek[i].date);
         let dateSpan = document.createElement('span');
