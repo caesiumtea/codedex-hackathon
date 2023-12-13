@@ -5,13 +5,13 @@
 }
 
 :root {
-  --color-bg-primary: #333333;
-  --color-bg-second: #444444;
-  --color-text-primary: #dddddd;
-  --color-text-second: #aaaaaa;
-  --color-accent-1: #eeee00;
-  --color-accent-2: #55ccff;
-  --color-accent-3: #aa66ff;
+  --color-bg-primary: #FCCA46;
+  --color-bg-second: #FE7F2D;
+  --color-text-primary: #233D4D;
+  --color-text-second: #233D4D;
+  --color-accent-1: #A1C181;
+  --color-accent-2: #619B8A;
+  --color-accent-3: #55ccff;
 }
 
 body {
@@ -29,7 +29,7 @@ main {
 
 .home-habit {
     margin: auto;
-    background-color: var(--color-accent-2);
+    background-color: var(--color-bg-second);
 }
 
 .home-habit-title {
@@ -38,7 +38,7 @@ main {
 
 #add-button {
   margin: auto;
-  background-color: var(--color-accent-2);
+  background-color: var(--color-bg-second);
   font-size: 10vw;
   border-radius: 50%;
   text-align: center;
