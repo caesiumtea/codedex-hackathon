@@ -26,12 +26,23 @@ function populateHabits() {
    
   for (let i = 0; i < latestDay.habits.length; i++) {
     console.log(latestDay.habits[i]);
+    let current = latestDay.habits[i];
     let newDiv = document.createElement('div');
     newDiv.classList = "home-habit";
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
-    newH3.textContent = latestDay.habits[i].title;
+    newH3.textContent = current.title;
     newDiv.appendChild(newH3);
+
+    let url;
+    if (current.type === "checklist") {
+      url = "viewCheckboxHabit.html";
+    } else if (current.type === "counting") {
+      url = "viewCountingHabit.html";
+    }
+    newDiv.addEventListener('click', function(){
+      gotoPage(url);
+    });
     habitsDiv.appendChild(newDiv);
   }
 }
