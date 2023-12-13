@@ -9,6 +9,9 @@ function startTracking() {
     tracking.days.push(newDay);
     localStorage.setItem("tracking", JSON.stringify(tracking));
   }
+  if (!localStorage.getItem("habitTitles")) {
+    localStorage.setItem("habitTitles", "[]");
+  }
 }
 
 function populateHabits() {
@@ -17,7 +20,7 @@ function populateHabits() {
   // habitsDiv.style.backgroundColor = "white";
   // habitsDiv.style.height = "10px";
   console.log(habitTitles.length);
-  habitTitles = localStorage.getItem("habitTitles");
+  habitTitles = JSON.parse(localStorage.getItem("habitTitles"));
   for (let i = 0; i < habitTitles.length; i++) {
     console.log(habitTitles[i]);
     let newDiv = document.createElement('div');
