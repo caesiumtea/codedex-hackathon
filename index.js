@@ -27,22 +27,22 @@ function populateHabits() {
   for (let i = 0; i < latestDay.habits.length; i++) {
     // console.log(latestDay.habits[i]);
     let current = latestDay.habits[i];
-    let newDiv = document.createElement('div');
-    newDiv.classList = "home-line";
+    let lineDiv = document.createElement('div');
+    lineDiv.classList = "home-habit";
     let doHabitBtn = document.createElement('div');
     doHabitBtn.classList = "do-habit-btn";
     doHabitBtn.textContent = "+";
     doHabitBtn.addEventListener('click', function(){
       markHabit(current.title)
     });
-    newDiv.appendChild(doHabitBtn);
+    lineDiv.appendChild(doHabitBtn);
 
-    let titleDiv = document.createElement('div');
-    titleDiv.classList = "home-habit";
+    // let titleDiv = document.createElement('div');
+    // titleDiv.classList = "home-habit-";
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
     newH3.textContent = current.title;
-    titleDiv.appendChild(newH3);
+    lineDiv.appendChild(newH3);
     
     let url;
     if (current.type === "checklist") {
@@ -51,12 +51,12 @@ function populateHabits() {
       url = "viewCountingHabit.html";
     }
     // sessionStorage.setItem("habitView", JSON.stringify(current))
-    titleDiv.addEventListener('click', function(){
+    newH3.addEventListener('click', function(){
       gotoPage(url, current);
     });
     
-    newDiv.appendChild(titleDiv);
-    habitsDiv.appendChild(newDiv);
+    // lineDiv.appendChild(titleDiv);
+    habitsDiv.appendChild(lineDiv);
   }
 }
 
