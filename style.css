@@ -5,11 +5,12 @@
 }
 
 :root {
-  --color-bg-primary: #FCCA46;
-  --color-bg-second: #FE7F2D;
+  /* --color-bg-primary: #FCCA46; */
+  --color-bg-primary: #A1C181;
+  --color-bg-second: #FCCA46;
   --color-text-primary: #233D4D;
   --color-text-second: #233D4D;
-  --color-accent-1: #A1C181;
+  --color-accent-1: #FE7F2D;
   --color-accent-2: #619B8A;
   --color-accent-3: #55ccff;
 }
@@ -55,6 +56,9 @@ main {
   text-align: center;
   width: 10vw;
   height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #add-button a {
