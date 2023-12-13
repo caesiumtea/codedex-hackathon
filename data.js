@@ -1,4 +1,5 @@
-function gotoPage(address = "index.html"){
+function gotoPage(address = "index.html", habit){
+  sessionStorage.setItem("habitView", JSON.stringify(habit));
   // go to new location
   window.location.assign(address);
 }
