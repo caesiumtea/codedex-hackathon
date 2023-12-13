@@ -28,12 +28,16 @@ function populateHabits() {
     // console.log(latestDay.habits[i]);
     let current = latestDay.habits[i];
     let newDiv = document.createElement('div');
-    newDiv.classList = "";
-    newDiv.classList = "home-habit";
+    newDiv.classList = "home-line";
+    let doHabitBtn = document.createElement('div');
+    doHabitBtn.classList = "do-habit-btn";
+    let titleDiv = document.createElement('div');
+    titleDiv.classList = "home-habit";
+    newDiv.appendChild(titleDiv);
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
     newH3.textContent = current.title;
-    newDiv.appendChild(newH3);
+    titleDiv.appendChild(newH3);
 
     let url;
     if (current.type === "checklist") {

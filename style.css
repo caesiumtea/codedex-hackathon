@@ -152,7 +152,7 @@ h2 {
 
 .seed::after {
   content: "🌱";
-  font-size: 8vw;
+  font-size: 5vw;
 }
 
 /* trapezoid code from https://stackoverflow.com/questions/7920754/how-to-draw-a-trapezium-trapezoid-with-css3 */
