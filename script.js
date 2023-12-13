@@ -1,3 +1,17 @@
+function initGoogleAPI() {
+    gapi.load('client:auth2', () => {
+        gapi.client.init({
+            apiKey: 'YOUR_API_KEY',
+            clientId: 'YOUR_CLIENT_ID',
+            discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+            scope: 'https://www.googleapis.com/auth/spreadsheets',
+        }).then(() => {
+            // Authenticated successfully
+            // Now, you can use gapi.client.sheets...
+        });
+    });
+}
+
 function get(){
   gapi.client.sheets.spreadsheets.values.get({
     spreadsheetId: '1MXQC1bXosDb6Ov9NI4YCJ-bLEOFpUyWj1r92gA65ySc',
