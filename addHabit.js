@@ -1,6 +1,7 @@
 import * as data from "data"
 
 function submitForm(){
+  console.log("Submitted!")
   let category = document.getElementById("category").value;
   let title = document.getElementById("title").value;
   let description = document.getElementById("description").value;
