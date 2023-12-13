@@ -38,10 +38,10 @@ function populateChecklist() {
         flowerDiv.appendChild(flowerPot);
 
         date = new Date(lastWeek[i].date);
-        dateP = document.createElement('span');
-        dateP.textContent = date.getMonth() + "/" + date.getDate();
-        dateP.classList = "flower-date";
-        flowerDiv.appendChild(dateP);
+        dateSpan = document.createElement('span');
+        dateSpan.textContent = date.getMonth() + "/" + date.getDate();
+        dateSpan.classList = "flower-date";
+        flowerDiv.appendChild(dateSpan);
         
         garden.appendChild(flowerDiv);
       }
