@@ -11,9 +11,9 @@ function populateChecklist() {
     let lastWeek;
     console.log("tracking days: " + tracking.days.length);
     if (tracking.days.length >= 7) {
-      lastWeek = tracking.days.slice(-8, -1);
+      lastWeek = tracking.days.slice(-7, tracking.days.length);
     } else {
-      lastWeek = tracking.days.slice(-(tracking.days.length + 1), -1);
+      lastWeek = tracking.days;
     }
 
     for (let i = 0; i < lastWeek.length; i++) {
