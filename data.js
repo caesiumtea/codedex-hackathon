@@ -29,7 +29,6 @@ function newPage(){
 //Global variables
 let habitTitles = [];
 let currDate = new Date();
-let 
 
 
 class Tracking{
