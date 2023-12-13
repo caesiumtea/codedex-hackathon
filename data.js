@@ -19,6 +19,15 @@ function getCookie(cname) {
   return "";
 }
 
+/* Data types for the site */
+
+class Data{
+  constructor(habits=[]){
+    this.habitTitles = habits;
+    this.currDate = new Date();
+  }
+}
+
 class Tracking{
   constructor(days=[]){
     this.days = days;
