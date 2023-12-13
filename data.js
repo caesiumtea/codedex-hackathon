@@ -31,12 +31,14 @@ let habitTitles = [];
 let currDate = new Date();
 
 
+// List of days stored under key "tracking" in cookies
 class Tracking{
   constructor(days=[]){
     this.days = days;
   }
 }
 
+// Stores a list of daily habits and the date they pertain to
 class Day{
   constructor(date, habits=[]){
     this.date = date;
@@ -44,8 +46,9 @@ class Day{
   }
 }
 
+// Data for a single daily instance of a habit
 class Habit{
-  constructor(type, title="", text="",  done=0){
+  constructor(type, title, text="",  done=0){
     this.type = type;
     this.title = title;
     this.text = text;

@@ -20,5 +20,23 @@ body {
 }
 
 h1 {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+}
+
+.home-habit {
+    margin: auto;
+    background-color: var(--color-accent-2);
+}
+
+.home-habit-title {
+    margin: auto;
+}
+
+#add-button {
+  margin: auto;
   
 }

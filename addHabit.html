@@ -3,13 +3,21 @@
   <head>
     <script src="data.js"></script>
     <script src="addHabit.js"></script>
+    <link rel="stylesheet" href="addHabit.css" />
   </head>
-    
+
   <body>
-    <form>
-      <input id="title" required/>
-      <input id="text"/>
-      <button id="submit" onclick="submitForm()"></button>
+    <form id="habitForm">
+      <h1>Form a new habit!</h1>
+      <select id="category">
+      <option value="counting">🔢 Counting</option>
+      <option value="checklist">✅ Checklist</option>
+      </select>
+      <label for="title">Title</label>
+      <input id="title" />
+      <label for="description">Description</label>
+      <input id="description" />
+      <button id="save" type="button" onclick="submitForm()">Form a new habit!</button>
     </form>
   </body>
 </html>
