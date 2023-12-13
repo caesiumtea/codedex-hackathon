@@ -49,6 +49,12 @@ main {
 
 /****** HOME ******/
 
+.home-line {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
 .home-habit {
   margin: 1rem;
   background-color: var(--color-bg-second);
@@ -66,6 +72,18 @@ main {
 .home-habit-title {
   margin: auto;
   font-weight: inherit;
+}
+
+.do-habit-btn {
+  background-color: var(--color-bg-second);
+  font-size: 10vw;
+  border-radius: 50%;
+  text-align: center;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #add-button {

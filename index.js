@@ -31,14 +31,19 @@ function populateHabits() {
     newDiv.classList = "home-line";
     let doHabitBtn = document.createElement('div');
     doHabitBtn.classList = "do-habit-btn";
+    doHabitBtn.textContent = "+";
+    doHabitBtn.addEventListener('click', function(){
+      markHabit(current.title)
+    });
+    newDiv.appendChild(doHabitBtn);
+
     let titleDiv = document.createElement('div');
     titleDiv.classList = "home-habit";
-    newDiv.appendChild(titleDiv);
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
     newH3.textContent = current.title;
     titleDiv.appendChild(newH3);
-
+    
     let url;
     if (current.type === "checklist") {
       url = "viewCheckboxHabit.html";
@@ -46,9 +51,11 @@ function populateHabits() {
       url = "viewCountingHabit.html";
     }
     // sessionStorage.setItem("habitView", JSON.stringify(current))
-    newDiv.addEventListener('click', function(){
+    titleDiv.addEventListener('click', function(){
       gotoPage(url, current);
     });
+    
+    newDiv.appendChild(titleDiv);
     habitsDiv.appendChild(newDiv);
   }
 }
