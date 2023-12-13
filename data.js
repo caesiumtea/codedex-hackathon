@@ -1,30 +1,4 @@
-// function setCookie(cName, cValue) {
-//   document.cookie = cName + "=" + cValue;
-// }
-
-// function getCookie(cname) {
-//   let name = cname + "=";
-//   let decodedCookie = decodeURIComponent(document.cookie);
-//   let ca = decodedCookie.split(";");
-//   for (let i = 0; i < ca.length; i++) {
-//     let c = ca[i];
-//     while (c.charAt(0) == " ") {
-//       c = c.substring(1);
-//     }
-//     if (c.indexOf(name) == 0) {
-//       return c.substring(name.length, c.length);
-//     }
-//   }
-//   return "";
-// }
-
-function gotoPage(address = "index.html", habit){
-  // check date
-  if(currDate != new Date()){
-    currDate = new Date();
-    // TODO: change to next day of data
-  }
-  sessionStorage.setItem("habitView", JSON.stringify(habit));
+function gotoPage(address = "index.html"){
   // go to new location
   window.location.assign(address);
 }
@@ -39,6 +13,13 @@ function searchHabit(day, habitTitle) {
   }
   return -1;
 }
+
+function markHabit(habitTitle) {
+    currDate = new Date();
+    let tracking = JSON.parse(localStorage.getItem("tracking"));
+    tracking.days[tracking.days.length - 1].habits[searchHabit(tracking.days[tracking.days.length - 1], habitTitle)].done += 1;
+    localStorage.setItem("tracking", JSON.stringify(tracking));
+  }
 
 /* Data types for the site */
 
