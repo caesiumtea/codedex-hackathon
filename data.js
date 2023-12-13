@@ -18,7 +18,7 @@
 //   return "";
 // }
 
-function gotoPage(address = "index.html"){
+function gotoPage(address = "index.html", habit){
   // check date
   if(currDate != new Date()){
     currDate = new Date();

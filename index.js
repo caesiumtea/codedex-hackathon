@@ -41,7 +41,7 @@ function populateHabits() {
       url = "viewCountingHabit.html";
     }
     newDiv.addEventListener('click', function(){
-      gotoPage(url);
+      gotoPage(url, current);
     });
     habitsDiv.appendChild(newDiv);
   }
