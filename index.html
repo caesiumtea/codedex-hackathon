@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="team later gators">
-    <meta name="description" content="">
-    <title>habit tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <h1>habit tracker</h1>
-    <main>
-      <div id="habits">
-      </div>
-      <div id="add-button">
-        <a href="addHabit.html">+</a>
-      </div>
-    </main>
-     <body>
-    <button onclick="get()">
-      
-    </button>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="team later gators">
+  <meta name="description" content="">
+  <title>habit tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body onload="startTracking()">
+  <h1>habit tracker</h1>
+  <main onload="populateHabits()">
+    <div id="habits">
+    </div>
+    <div id="add-button">
+      <a href="addHabit.html">+</a>
+    </div>
+  </main>
+</body>
+
 </html>
