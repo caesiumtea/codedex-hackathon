@@ -20,7 +20,10 @@ function getCookie(cname) {
 
 function gotoPage(address = "index.html"){
   // check date
-  if
+  if(currDate != new Date()){
+    currDate = new Date();
+    // TODO: change to next day of data
+  }
   
   // go to new location
   window.location.assign(address);
