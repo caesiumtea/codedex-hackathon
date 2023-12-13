@@ -29,6 +29,17 @@ function gotoPage(address = "index.html", habit){
   window.location.assign(address);
 }
 
+// returns index of habit with matching name within a given day
+// (index within day.habits)
+function searchHabit(day, habitTitle) {
+  for (let i = 0; i < day.habits.length; i++) {
+    if (day.habits[i].title === habitTitle) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 /* Data types for the site */
 
 //Global variables

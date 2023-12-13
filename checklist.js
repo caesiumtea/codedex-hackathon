@@ -1,7 +1,8 @@
 function populateChecklist() {
     let habit = JSON.parse(sessionStorage.getItem("habitView"));
+    let habitName = habit.title;
     let h1 = document.querySelector("h1");
-    h1.textContent = habit.title;
+    h1.textContent = habitName;
     // let main = document.querySelector("main");
     let garden = document.querySelector("#garden");
 
@@ -14,12 +15,31 @@ function populateChecklist() {
     } else {
       lastWeek = tracking.days.slice(-(tracking.days.length), -1);
     }
+
     for (let i = 0; i < lastWeek.length; i++) {
-      let flowerDiv = document.createElement('div');
-      flowerDiv.classList = "flower-div";
-      garden.appendChild(flowerDiv);
+      habitIndex = searchHabit(lastWeek[i], habitName);
+      // if == -1 then this habit title was not found in last week
+      if (habitIndex != -1) {
+        // instance means whether a certain habit happened on a certain day
+        let instance = lastWeek[i].habits[habitIndex];
+        let flowerDiv = document.createElement('div');
+        flowerDiv.classList = "flower-div";
+        if (instance.done != 0) {
+          let bloom = document.createElement('div');
+          bloom.classList = "bloom";
+          flowerDiv.appendChild(bloom);
+        } else {
+          let seed = document.createElement('div');
+          seed.classList = "seed";
+          flowerDiv.appendChild(seed);
+        }
+        let flowerPot = document.createElement('div');
+        flowerPot.classList = "flowerpot";
+        flowerDiv.appendChild(flowerPot);
+        garden.appendChild(flowerDiv);
+      }
     }
 
 }
 
-populateView()
+populateChecklist()
