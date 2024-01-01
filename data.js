@@ -1,9 +1,12 @@
+/* Global utility functions */
+
+// Redirect to a certain page
 function gotoPage(address = "index.html"){
   // go to new location
   window.location.assign(address);
 }
 
-// returns index of habit with matching name within a given day
+// Returns index of habit with matching name within a given day
 // (index within day.habits)
 function searchHabit(day, habitTitle) {
   for (let i = 0; i < day.habits.length; i++) {
@@ -14,10 +17,12 @@ function searchHabit(day, habitTitle) {
   return -1;
 }
 
+// Mark a habit as completed by adding 1 to its "done" count
 function markHabit(habitTitle) {
     currDate = new Date();
     let tracking = JSON.parse(localStorage.getItem("tracking"));
-    tracking.days[tracking.days.length - 1].habits[searchHabit(tracking.days[tracking.days.length - 1], habitTitle)].done += 1;
+    currentDay = tracking.days[tracking.days.length - 1];
+    currentDay.habits[searchHabit(currentDay, habitTitle)].done += 1;
     localStorage.setItem("tracking", JSON.stringify(tracking));
   }
 
@@ -27,8 +32,9 @@ function markHabit(habitTitle) {
 let habitTitles = [];
 let currDate = new Date();
 
+/* Classes */
 
-// List of days stored under key "tracking" in cookies
+// List of days stored under key "tracking" in LocalStorage
 class Tracking{
   constructor(days=[]){
     this.days = days;
