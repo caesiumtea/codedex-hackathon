@@ -9,23 +9,16 @@ function startTracking() {
     tracking.days.push(newDay);
     localStorage.setItem("tracking", JSON.stringify(tracking));
   }
-  // if (!localStorage.getItem("habitTitles")) {
-  //   localStorage.setItem("habitTitles", "[]");
-  // }
 }
 
 function populateHabits() {
   console.log("populating...");
   let habitsDiv = document.getElementById("habits");
-  // habitsDiv.style.backgroundColor = "white";
-  // habitsDiv.style.height = "10px";
 
-  // habitTitles = JSON.parse(localStorage.getItem("habitTitles"));
    let tracking = JSON.parse(localStorage.getItem("tracking"));
    let latestDay = tracking.days[tracking.days.length - 1];
    
   for (let i = 0; i < latestDay.habits.length; i++) {
-    // console.log(latestDay.habits[i]);
     let current = latestDay.habits[i];
     let newDiv = document.createElement('div');
     newDiv.classList = "";
@@ -41,7 +34,7 @@ function populateHabits() {
     } else if (current.type === "counting") {
       url = "viewCountingHabit.html";
     }
-    // sessionStorage.setItem("habitView", JSON.stringify(current))
+
     newDiv.addEventListener('click', function(){
       gotoPage(url, current);
     });
