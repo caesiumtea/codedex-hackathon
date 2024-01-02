@@ -64,7 +64,7 @@ function populateHabits() {
       url = "viewCountingHabit.html";
     }
     // sessionStorage.setItem("habitView", JSON.stringify(current))
-    newDiv.addEventListener('click', function(){
+    viewHabitBtn.addEventListener('click', function(){
       gotoPage(url, currentHabit);
     });
     lineDiv.appendChild(viewHabitBtn);
