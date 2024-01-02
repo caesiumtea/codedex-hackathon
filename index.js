@@ -41,9 +41,6 @@ function populateHabits() {
     });
     lineDiv.appendChild(doHabitBtn);
 
-    // let titleDiv = document.createElement('div');
-    // titleDiv.classList = "home-habit-";
-
     // Create habit title
     let newH3 = document.createElement('h3');
     newH3.classList = "home-habit-title";
