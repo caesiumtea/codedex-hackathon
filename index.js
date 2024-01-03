@@ -34,11 +34,25 @@ function populateHabits() {
 
     // Create done button
     let doHabitBtn = document.createElement('div');
-    doHabitBtn.classList = "do-habit-btn";
-    doHabitBtn.textContent = "+";
-    doHabitBtn.addEventListener('click', function(){
-      markHabit(currentHabit.title)
-    });
+    // If it's a checklist type habit, determine whether it's checkable
+    if (currentHabit.type === "checklist") {
+      if (currentHabit.done > 0) { //completed
+        doHabitBtn.classList = "do-habit-btn";
+        doHabitBtn.textContent = "☑";
+      } else { //not completed
+        doHabitBtn.classList = "do-habit-btn clickable";
+        doHabitBtn.textContent = "☐";
+        doHabitBtn.addEventListener('click', function(){
+          markHabit(currentHabit.title)
+        });
+      }
+    } else if (currentHabit.type === "counting") {
+      doHabitBtn.classList = "do-habit-btn clickable";
+      doHabitBtn.textContent = "+";
+      doHabitBtn.addEventListener('click', function(){
+        markHabit(currentHabit.title)
+      });
+    }
     lineDiv.appendChild(doHabitBtn);
 
     // Create habit title
@@ -49,7 +63,7 @@ function populateHabits() {
     
     // Create button to view habit details
     let viewHabitBtn = document.createElement('div');
-    viewHabitBtn.classList = "view-habit-btn";
+    viewHabitBtn.classList = "view-habit-btn clickable";
     viewHabitBtn.textContent = "...";
 
     // Choose where clicking the habit will lead to, depending on if it's

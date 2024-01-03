@@ -81,6 +81,10 @@ p {
   font-weight: inherit;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .do-habit-btn {
   background-color: var(--color-bg-second);
   font-size: 10vw;
@@ -107,9 +111,12 @@ p {
   border-left: solid 2px var(--color-accent-1);
 }
 
-.do-habit-btn:hover, .view-habit-btn:hover {
-  cursor: pointer;
- background-color: var(--color-accent-1);
+.clickable:hover {
+  background-color: var(--color-accent-1);
+}
+
+.clickable:active {
+  background-color: var(--color-accent-2);
 }
 
 #add-button {

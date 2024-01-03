@@ -26,6 +26,7 @@ function markHabit(habitTitle) {
     currentDay = tracking.days[tracking.days.length - 1];
     currentDay.habits[searchHabit(currentDay, habitTitle)].done += 1;
     localStorage.setItem("tracking", JSON.stringify(tracking));
+    location.reload();
   }
 
 /* Data types for the site */
